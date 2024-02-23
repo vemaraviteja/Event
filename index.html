@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src=./Images/dhoni4.avif width=150px height=150px> -->
+    <script>
+        var one=document.createElement("div");
+        document.body.appendChild(one);
+        one.style.border="1px solid red";
+        one.style.width="300px";
+        one.style.height="200px";
+        one.style.marginLeft="400px";
+        
+
+
+        var img1 = document.createElement("img");
+        one.appendChild(img1);
+
+
+        var two = document.createElement("div");
+        two.setAttribute("style","margin-top:150px")
+        document.body.appendChild(two);
+        two.style.marginLeft="300px";
+
+        var img2 = document.createElement("img");
+        two.appendChild(img2);
+        img2.src= "./Images/Dhoni.jpg";
+        img2.style.width="180px";
+        img2.style.heigth="150px";
+        img2.style.paddingRight="20px";
+        img2.addEventListener("click",cb1);
+
+        var img3 = document.createElement("img");
+        two.appendChild(img3);
+        img3.src= "./Images/dhoni2.jpg";
+        img3.style.width="150px";
+        img3.style.heigth="150px";
+        img3.style.paddingRight="20px";
+        img3.addEventListener("click",cb2);
+
+
+        var img4 = document.createElement("img");
+        two.appendChild(img4);
+        img4.src= "./Images/dhoni4.avif";
+        img4.style.width="150px";
+        img4.style.heigth="200";
+        img4.addEventListener("click",cb3);
+
+
+        function cb1(){
+            img1.src="./Images/Dhoni.jpg";
+            img1.style.width = "300px";
+            img1.style.heigth="300px";
+        }
+
+        function cb2(){
+            img1.src="./Images/dhoni2.jpg";
+            img1.style.width = "300px";
+            img1.style.heigth ="300px";
+        }
+
+        function cb3(){
+            img1.src="./Images/dhoni4.avif";
+            img1.style.width = "300px";
+            img1.style.heigth="300px";
+        }
+        
+
+        //***********************************************
+        //TASK 2
+        //**********************************************
+
+        var tb= document.createElement("table");
+        tb.style.border="1px solid blue";
+        tb.style.marginTop="100px";
+        // tb.setAttribute("style","margin-left:100px");
+        document.body.appendChild(tb);
+
+        var tr = document.createElement("tr");
+        tr.style.height="200px";
+        tb.appendChild(tr);
+
+        var td1 = document.createElement("td");
+        td1.innerHTML="Dhoni1";
+        td1.style.color="white";
+        td1.style.width="200px";
+        tr.appendChild(td1);
+
+        td1.addEventListener("click",cb4);
+        function cb4(){
+            td1.innerHTML=" <img src=./Images/Dhoni.jpg  width=150;height=150>";
+        }
+
+
+
+        var td2 = document.createElement("td");
+        td2.innerHTML="Dhoni2";
+        td2.style.color="white";
+        td2.style.width="200px";
+        tr.appendChild(td2);
+
+        td2.addEventListener("click", cb5);
+        function cb5(){
+            td2.innerHTML="<img src=./Images/dhoni2.jpg width=150 height=150>";
+        }
+
+
+
+        var td3 = document.createElement("td");
+        td3.innerHTML="Dhoni3";
+        td3.style.color="white";
+        td3.style.width="200px";
+        tr.appendChild(td3);
+
+
+        td3.addEventListener("click",cb6);
+        function cb6(){
+            td3.innerHTML=" <img src=./Images/dhoni4.avif width=150px height=150px>";
+        }
+    </script>
+</body>
+</html>
